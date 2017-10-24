@@ -1,0 +1,44 @@
+{
+  "name": "eventjoin",
+  "description": "Redefining Professional Events.",
+  "main": "server.js",
+  "authors": [
+    "Designer Singh"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "font-awesome": "~4.5.0",
+    "angular-toastr": "^1.7.0",
+    "angular-cookies": "^1.4.9",
+    "angular-local-storage": "^0.2.3",
+    "angular-bootstrap": "^1.1.2",
+    "jpkleemans-angular-validate": "^1.1.1",
+    "ngMask": "angular-mask#^3.1.1",
+    "angular-resource": "^1.6.6",
+    "ng-text-truncate": "*"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.min.js",
+        "dist/css/bootstrap.min.css",
+        "less/bootstrap.less"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
+      ]
+    }
+  }
+}

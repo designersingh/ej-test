@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'latoblack';
+  src: url('../fonts/lato-black-webfont.woff2') format('woff2'),
+  url('../fonts/lato-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latobold';
+  src: url('../fonts/lato-bold-webfont.woff2') format('woff2'),
+  url('../fonts/lato-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latolight';
+  src: url('../fonts/lato-light-webfont.woff2') format('woff2'),
+  url('../fonts/lato-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'latoregular';
+  src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+  url('../fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cursiveFont';
+  src: url('../fonts/permanentmarker-webfont.woff2') format('woff2'),
+  url('../fonts/permanentmarker-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$primary                    : #1A95E9;
+$primary-hover              : #07add3;
+$secondary                  : #048d9b;
+$secondary-hover            : #046b70;
+$tertiary                   : #2E282A;
+$tertiary-hover             : #046b70;
+$white                      : #ffffff;
+$light-gray                 : #f1f1f1;
+$medium-light-gray          : #ededed;
+$black                      : #000000;
+$dark-gray                  : #333333;
+$medium-gray                : #777777;
+$gray                       : #999999;
+$lush-black                 : #040004;
+$red                        : #ff0000;
+$green                      : #39b54a;
+
+
+@mixin bg-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+@mixin text-color($color) {
+  color: $color;
+}
+
+@mixin border($color, $thickness:1px) {
+  border: $thickness $color solid;
+}
+
+@mixin border($color, $thickness:1px) {
+  border: $thickness $color solid;
+}
+
+@mixin border-top($color, $thickness:1px) {
+  border-top: $thickness $color solid;
+}
+
+@mixin border-bottom($color, $thickness:1px) {
+  border-bottom: $thickness $color solid;
+}
+
+@mixin border-left($color, $thickness:1px) {
+  border-left: $thickness $color solid;
+}
+
+@mixin border-right($color, $thickness:1px) {
+  border-right: $thickness $color solid;
+}
+
+@mixin margin($val) {
+  margin: $val;
+}
+
+@mixin margin-right($val) {
+  margin-right: $val !important;
+}
+
+@mixin margin-left($val) {
+  margin-left: $val !important;
+}
+
+@mixin margin-top($val) {
+  margin-top: $val !important;
+}
+
+@mixin margin-bottom($val) {
+  margin-bottom: $val !important;
+}
+
+@mixin margin-left-right($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin margin-top-bot($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin padding($val) {
+  padding: $val;
+}
+
+@mixin padding-right($val) {
+  padding-right: $val;
+}
+
+@mixin padding-left($val) {
+  padding-left: $val;
+}
+
+@mixin padding-top($val) {
+  padding-top: $val;
+}
+
+@mixin padding-bottom($val) {
+  padding-bottom: $val;
+}
+
+@mixin padding-left-right($left, $right) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin padding-top-bot($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin gradient($startColor, $endColor, $direction, $opacity:0.85) {
+  /* fallback for old browsers */
+  background: $startColor;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to $direction, rgba($startColor, $opacity) , rgba($endColor, $opacity));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to $direction, rgba($startColor, $opacity) , rgba($endColor, $opacity));
+}
+
+@mixin rounded-corners($topLeft, $topRight, $bottomRight, $bottomLeft) {
+  -webkit-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  -moz-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  -o-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  -ms-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+}
+
+
+@mixin rounded-corners($topLeft, $topRight, $bottomRight, $bottomLeft) {
+  -webkit-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  -moz-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  -o-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  -ms-border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+  border-radius:$topLeft $topRight $bottomRight $bottomLeft;
+}

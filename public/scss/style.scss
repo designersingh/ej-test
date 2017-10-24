@@ -1,0 +1,412 @@
+@import "utilities-variables";
+
+
+/********************************************
+    Bootstrap elements override starts
+********************************************/
+
+a, a:hover, a:focus, a:active, a:visited, span.btn-link{
+  text-decoration: none!important;
+  cursor: pointer!important;
+}
+
+.validation-invalid
+{
+  color: red;
+}
+
+
+#navbar ul.navbar-nav li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/********************************************
+    Bootstrap elements override ends
+********************************************/
+
+/********************************************
+       Toastr Elements Override starts
+********************************************/
+
+#toast-container > div, #toast-container > :hover
+{
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+
+
+/********************************************
+       Toastr Elements Override starts
+********************************************/
+
+
+
+/********************************************
+            Loading SVG Starts
+********************************************/
+
+#loading
+{
+  display: block;
+  position: absolute;
+  background: rgba(255,255,255,.8);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+#loading .content
+{
+  position: absolute;
+  width: 150px;
+  height: 130px;
+  margin: auto;
+  text-align: center;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#loading .content img
+{
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+
+/********************************************
+            Loading SVG Ends
+********************************************/
+
+body{
+  font-family: 'latoregular', sans-serif;
+  background: #f9f9f9;
+  line-height: 1.6em;
+  color: #717171;
+}
+
+*
+{
+  outline             : none!important;
+  -webkit-transition  : all 200ms ease;
+  -moz-transition     : all 200ms ease;
+  -ms-transition      : all 200ms ease;
+  -o-transition       : all 200ms ease;
+  transition          : all 200ms ease;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, li{
+  line-height: 1.6em;
+}
+
+.main-view .form-control
+{
+  height: auto;
+  min-height: 40px;
+  padding: 10px 12px;
+}
+
+.main-view select.form-control
+{
+  height: 42px;
+}
+
+.main{
+  min-height: calc(100vh - 100px);
+  @include bg-opacity($medium-light-gray, 1)
+}
+
+#header
+{
+  @include bg-opacity($white, .95);
+  border-bottom: none;
+}
+
+.navbar-default .navbar-nav > li > a
+{
+  color: $tertiary;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li.active > a:hover
+{
+  @include bg-opacity($primary, 1);
+  color: $white!important;
+}
+
+.nav.login-btns >li > a
+{
+  padding: 5px 10px;
+}
+
+
+.main-view
+{
+  margin-top: 50px;
+}
+
+.navbar-brand
+{
+  width: 160px;
+  padding: 9px 7px;
+}
+
+.navbar-toggle, .navbar-toggle:active
+{
+  padding: 5px 10px;
+  color: $primary;
+}
+
+.navbar-toggle:hover
+{
+  padding: 5px 10px;
+  background-color: $primary!important;
+  border-color: $primary;
+  color: #ffffff;
+}
+
+/************************************************
+                Homepage
+************************************************/
+
+.carousel.fade {
+  opacity: 1;
+}
+.carousel.fade .item {
+  transition: opacity ease-out .7s;
+  left: 0;
+  opacity: 0; /* hide all slides */
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+.carousel.fade .item:first-child {
+  top: auto;
+  opacity: 1; /* show first slide */
+  position: relative;
+}
+.carousel.fade .item.active {
+  opacity: 1;
+  max-height: 500px;
+  height: auto;
+
+}
+
+.carousel.fade .item img {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  top : 0;
+  bottom : 0;
+  left : 0;
+  right : 0;
+  margin: auto;
+}
+
+.flex-center-parent
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-center-child
+{
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.home-hero-header-xs {
+  display: flex;
+  position: relative;
+  max-height: 300px;
+
+  .hero-content{
+    position: relative;
+    z-index: 1;
+    /*background: rgba(255,255,255,.75);*/
+  }
+
+  img.bg-backdrop {
+    display: flex;
+    /*justify-content: center; !* align horizontal *!
+    align-items: center; !* align vertical *!*/
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.home-hero-carousel
+{
+  max-height: 500px;
+  position: relative;
+
+  .hero-carousel-content{
+    position: absolute;
+    width: 95%;
+    height: auto;
+    top : 0;
+    bottom : 0;
+    left : 0;
+    right : 0;
+    margin: auto;
+    z-index: 100;
+
+    h1{
+      font-size: 45px;
+      line-height: 1.3em;
+    }
+  }
+
+  .bg-overlay{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.35);
+    z-index: 1;
+  }
+}
+
+.home-search-bar
+{
+  position    : relative;
+  top         : -100px;
+  background  : $white;
+  z-index     : 9999;
+}
+
+/********************************************
+            footer
+********************************************/
+
+.footer-links {
+  margin-bottom: 0;
+  li
+  {
+    padding:3px 5px;
+    font-size: 15px;
+
+    a{
+      color: $white;
+      text-transform: inherit;
+
+      &:hover{
+        color:$primary-hover;
+      }
+    }
+  }
+}
+
+.footer-follow-us a
+{
+  display: inline-block;
+  padding: 3px 5px 2px 5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  margin: 0 3px 10px 3px;
+}
+
+/********************************************
+                404 Page
+********************************************/
+#error-page
+{
+  display: block;
+  position: relative;
+  width: 100%;
+  @include bg-opacity($primary, 1);
+  color: #ffffff;
+}
+
+
+.error-page-content-img img
+{
+  max-height: 250px;
+  margin: 0 auto;
+}
+
+.error-page-content h1
+{
+  font-size: 140px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+
+/************************************************
+                Quote Carousel
+************************************************/
+
+#quote-carousel
+{
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+}
+
+/* Control buttons  */
+#quote-carousel .carousel-control
+{
+  background: none;
+  color: #222;
+  font-size: 1.6em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+/* Previous button  */
+#quote-carousel .carousel-control.left
+{
+  left: -25px;
+}
+/* Next button  */
+#quote-carousel .carousel-control.right
+{
+  right: -25px !important;
+}
+/* Changes the position of the indicators */
+#quote-carousel .carousel-indicators
+{
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-right: -19px;
+}
+/* Changes the color of the indicators */
+#quote-carousel .carousel-indicators li
+{
+  background: #c0c0c0;
+}
+#quote-carousel .carousel-indicators .active
+{
+  background: #333333;
+}
+#quote-carousel img
+{
+  width: 250px;
+  height: 100px
+}
+/* End carousel */
+
+.item blockquote {
+  border-left: none;
+  margin: 0;
+}
+
+.item blockquote img {
+  margin-bottom: 10px;
+}
+
+.item blockquote p:before {
+  content: "\f10d";
+  font-family: 'Fontawesome';
+  float: left;
+  margin-right: 10px;
+}

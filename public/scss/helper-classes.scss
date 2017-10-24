@@ -1,0 +1,792 @@
+
+@import "utilities-variables";
+
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+
+.row-centered-margin {
+  text-align:center;
+  margin: 0 auto;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  /* inline-block space fix */
+  vertical-align: text-top;
+  vertical-align: top;
+}
+.col-centered-no-float {
+  display:inline-block;
+  text-align: left;
+  /* inline-block space fix */
+  margin-right:-4px;
+
+}
+
+.img-hover-zoom
+{
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+
+  &:hover{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+.text-shadow
+{
+  text-shadow: rgba(0,0,0,0.55) 1px 1px 6px;
+}
+
+.text-shadow-white
+{
+  text-shadow: rgba(255,255,255,.85) 1px 1px 2px;
+}
+
+.no-text-shadow
+{
+  text-shadow: none;
+}
+
+.cursive-font
+{
+  font-family:cursiveFont, cursive;
+}
+
+.vertical-middle
+{
+  vertical-align: -webkit-baseline-middle!important;
+  vertical-align: -moz-baseline-middle!important;
+  vertical-align: middle!important;
+}
+
+.super-heading
+{
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.bg-absolute-back
+{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+}
+
+.bg-full-back
+{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.z-index10
+{
+  z-index: 10;
+}
+
+.text-center
+{
+  text-align: center!important;
+}
+
+.display-flex
+{
+  display: flex!important;
+}
+
+.display-inline-block
+{
+  display: inline-block!important;
+}
+
+.overflow-hidden
+{
+  overflow: hidden !important;
+}
+
+.position-relative
+{
+  position: relative!important;
+}
+
+.cursor-default
+{
+  cursor: default !important;
+}
+
+.cursor-pointer
+{
+  cursor: pointer !important;
+}
+
+.margin-auto
+{
+  margin: 0 auto !important;
+}
+
+.break-all{display: inline-block; word-break: break-all!important;}
+.no-bg-img{background-image: none !important;}
+.lineHeightNormal{line-height: normal !important;}
+.lineHeight10{line-height: 10px!important;}
+.lineHeight15{line-height: 15px!important;}
+.lineHeight20{line-height: 20px!important;}
+.lineHeight30{line-height: 30px!important;}
+.lineHeight40{line-height: 40px!important;}
+.lineHeight50{line-height: 50px!important;}
+
+.border-2{border-width: 2px!important;}
+.border-3{border-width: 3px!important;}
+.border-4{border-width: 4px!important;}
+.border-5{border-width: 5px!important;}
+.border-8{border-width: 8px!important;}
+.border-10{border-width: 10px!important;}
+
+.mtopbot0       {@include margin-top-bot(0px, 0px)}
+.mtopbot2       {@include margin-top-bot(2px, 2px)}
+.mtopbot5       {@include margin-top-bot(5px, 5px)}
+.mtopbot10      {@include margin-top-bot(10px, 10px)}
+.mtopbot15      {@include margin-top-bot(15px, 15px)}
+.mtopbot20      {@include margin-top-bot(20px, 20px)}
+.mtopbot25      {@include margin-top-bot(25px, 25px)}
+.mtopbot30      {@include margin-top-bot(30px, 30px)}
+.mtopbot40      {@include margin-top-bot(40px, 40px)}
+.mtopbot50      {@include margin-top-bot(50px, 50px)}
+.mtopbot60      {@include margin-top-bot(60px, 60px)}
+.mtopbot75      {@include margin-top-bot(75px, 75px)}
+.mtopbot100      {@include margin-top-bot(100px, 100px)}
+.mtopbot125      {@include margin-top-bot(125px, 125px)}
+.mtopbot150      {@include margin-top-bot(150px, 150px)}
+.mleftright0    {@include margin-left-right(0px, 0px)}
+.mleftright1    {@include margin-left-right(1px, 1px)}
+.mleftright2    {@include margin-left-right(2px, 2px)}
+.mleftright5    {@include margin-left-right(5px, 5px)}
+.mleftright10   {@include margin-left-right(10px, 10px)}
+.mleftright15   {@include margin-left-right(15px, 15px)}
+.mleftright20   {@include margin-left-right(20px, 20px)}
+.mleftright30   {@include margin-left-right(30px, 30px)}
+.mleftright40   {@include margin-left-right(40px, 40px)}
+.mleftright-5   {@include margin-left-right( -5px,  -5px)}
+.mleftright-10  {@include margin-left-right(-10px, -10px)}
+.mleftright-15  {@include margin-left-right(-15px, -15px)}
+.mleftright-20  {@include margin-left-right(-20px, -20px)}
+.mleftright-30  {@include margin-left-right(-30px, -30px)}
+.mleftright-40  {@include margin-left-right(-40px, -40px)}
+.mtop0          {@include margin-top(0px)}
+.mtop2          {@include margin-top(2px)}
+.mtop3          {@include margin-top(3px)}
+.mtop5          {@include margin-top(5px)}
+.mtop7          {@include margin-top(7px)}
+.mtop8          {@include margin-top(8px)}
+.mtop10         {@include margin-top(10px)}
+.mtop15         {@include margin-top(15px)}
+.mtop20         {@include margin-top(20px)}
+.mtop25         {@include margin-top(25px)}
+.mtop30         {@include margin-top(30px)}
+.mtop35         {@include margin-top(35px)}
+.mtop40         {@include margin-top(40px)}
+.mtop50         {@include margin-top(50px)}
+.mtop60         {@include margin-top(60px)}
+.mtop75         {@include margin-top(75px)}
+.mtop100         {@include margin-top(100px)}
+.mtop150         {@include margin-top(150px)}
+.mtop-2         {@include margin-top(-2px)}
+.mtop-3         {@include margin-top(-3px)}
+.mtop-5         {@include margin-top(-5px)}
+.mtop-6         {@include margin-top(-6px)}
+.mtop-7         {@include margin-top(-7px)}
+.mtop-10        {@include margin-top(-10px)}
+.mtop-15        {@include margin-top(-15px)}
+.mtop-20        {@include margin-top(-20px)}
+.mtop-25        {@include margin-top(-25px)}
+.mtop-30        {@include margin-top(-30px)}
+.mtop-35        {@include margin-top(-35px)}
+.mtop-40        {@include margin-top(-40px)}
+.mtop-50        {@include margin-top(-50px)}
+.mtop-60        {@include margin-top(-60px)}
+.mtop-75        {@include margin-top(-75px)}
+.mtop-100        {@include margin-top(-100px)}
+.mbot-5         {@include margin-bottom( -5px)}
+.mbot-7         {@include margin-bottom( -7px)}
+.mbot-10        {@include margin-bottom(-10px)}
+.mbot-15        {@include margin-bottom(-15px)}
+.mbot-20        {@include margin-bottom(-20px)}
+.mbot-25        {@include margin-bottom(-25px)}
+.mbot-30        {@include margin-bottom(-30px)}
+.mbot-40        {@include margin-bottom(-40px)}
+.mbot-50        {@include margin-bottom(-50px)}
+.mbot-75        {@include margin-bottom(-75px)}
+.mbot0          {@include margin-bottom( 0px)}
+.mbot5          {@include margin-bottom( 5px)}
+.mbot7          {@include margin-bottom( 7px)}
+.mbot8          {@include margin-bottom( 8px)}
+.mbot9          {@include margin-bottom( 9px)}
+.mbot10         {@include margin-bottom(10px)}
+.mbot15         {@include margin-bottom(15px)}
+.mbot20         {@include margin-bottom(20px)}
+.mbot25         {@include margin-bottom(25px)}
+.mbot30         {@include margin-bottom(30px)}
+.mbot40         {@include margin-bottom(40px)}
+.mbot50         {@include margin-bottom(50px)}
+.mbot75         {@include margin-bottom(75px)}
+.mbot100        {@include margin-bottom(100px)}
+.mleft0         {@include margin-left( 0px)}
+.mleft5         {@include margin-left(  5px)}
+.mleft10        {@include margin-left( 10px)}
+.mleft15        {@include margin-left( 15px)}
+.mleft20        {@include margin-left( 20px)}
+.mleft25        {@include margin-left( 25px)}
+.mleft30        {@include margin-left( 30px)}
+.mleft40        {@include margin-left( 40px)}
+.mleft-5        {@include margin-left( -5px)}
+.mleft-10       {@include margin-left(-10px)}
+.mleft-15       {@include margin-left(-15px)}
+.mleft-20       {@include margin-left(-20px)}
+.mright0        {@include margin-right( 0px)}
+.mright2        {@include margin-right( 2px)}
+.mright5        {@include margin-right( 5px)}
+.mright10       {@include margin-right(10px)}
+.mright15       {@include margin-right(15px)}
+.mright20       {@include margin-right(20px)}
+.mright25       {@include margin-right(25px)}
+.mright30       {@include margin-right(30px)}
+.mright35       {@include margin-right(35px)}
+.mright40       {@include margin-right(40px)}
+.mright50       {@include margin-right(50px)}
+.pad0           {@include padding( 0px)}
+.pad10          {@include padding(10px)}
+.pad15          {@include padding(15px)}
+.pad20          {@include padding(20px)}
+.pad30          {@include padding(30px)}
+.pad40          {@include padding(40px)}
+.pad50          {@include padding(50px)}
+.pleft0         {@include padding-left(  0px)}
+.pleft5         {@include padding-left(  5px)}
+.pleft10        {@include padding-left( 10px)}
+.pleft15        {@include padding-left( 15px)}
+.pleft20        {@include padding-left( 20px)}
+.pleft25        {@include padding-left( 25px)}
+.pleft30        {@include padding-left( 30px)}
+.pleft40        {@include padding-left( 40px)}
+.pleft50        {@include padding-left( 50px)}
+.pright0        {@include padding-right(0px)}
+.pright5        {@include padding-right(5px)}
+.pright10       {@include padding-right(10px)}
+.pright15       {@include padding-right(15px)}
+.pright20       {@include padding-right(20px)}
+.pright25       {@include padding-right(25px)}
+.pright30       {@include padding-right(30px)}
+.pright40       {@include padding-right(40px)}
+.pright50       {@include padding-right(50px)}
+.ptop0          {@include padding-top(0)}
+.ptop2          {@include padding-top(2px  )}
+.ptop5          {@include padding-top(5px  )}
+.ptop10         {@include padding-top(10px)}
+.ptop15         {@include padding-top(15px)}
+.ptop20         {@include padding-top(20px)}
+.ptop25         {@include padding-top(25px)}
+.ptop30         {@include padding-top(30px)}
+.ptop40         {@include padding-top(40px)}
+.ptop50         {@include padding-top(50px)}
+.ptop75         {@include padding-top(75px)}
+.ptop100        {@include padding-top(100px )}
+.pbot0          {@include padding-bottom( 0   )}
+.pbot2          {@include padding-bottom( 2px )}
+.pbot5          {@include padding-bottom( 5px )}
+.pbot10         {@include padding-bottom( 10px)}
+.pbot15         {@include padding-bottom( 15px)}
+.pbot20         {@include padding-bottom( 20px)}
+.pbot20         {@include padding-bottom( 25px)}
+.pbot30         {@include padding-bottom( 30px)}
+.pbot40         {@include padding-bottom( 40px)}
+.pbot50         {@include padding-bottom( 50px)}
+.pbot75         {@include padding-bottom( 75px)}
+.pbot100        {@include padding-bottom( 100px)}
+.ptopbot0       {@include padding-top-bot(0, 0)}
+.ptopbot3       {@include padding-top-bot(3px, 3px)}
+.ptopbot5       {@include padding-top-bot(5px, 5px)}
+.ptopbot10      {@include padding-top-bot(10px, 10px)}
+.ptopbot15      {@include padding-top-bot(15px, 15px)}
+.ptopbot20      {@include padding-top-bot(20px, 20px)}
+.ptopbot25      {@include padding-top-bot(25px, 25px)}
+.ptopbot30      {@include padding-top-bot(30px, 30px)}
+.ptopbot40      {@include padding-top-bot(40px, 40px)}
+.ptopbot50      {@include padding-top-bot(50px, 50px)}
+.ptopbot75      {@include padding-top-bot(75px, 75px)}
+.ptopbot100     {@include padding-top-bot(100px,100px)}
+.ptopbot120     {@include padding-top-bot(120px,120px)}
+.ptopbot150     {@include padding-top-bot(150px,150px)}
+.pleftright0    {@include padding-left-right( 0,    0   )}
+.pleftright3    {@include padding-left-right( 3px,  3px )}
+.pleftright5    {@include padding-left-right( 5px,  5px )}
+.pleftright10   {@include padding-left-right( 10px, 10px)}
+.pleftright15   {@include padding-left-right( 15px, 15px)}
+.pleftright20   {@include padding-left-right( 20px, 20px)}
+.pleftright30   {@include padding-left-right( 30px, 30px)}
+.pleftright40   {@include padding-left-right( 40px, 40px)}
+.pleftright50   {@include padding-left-right( 50px, 50px)}
+.pleftright75   {@include padding-left-right( 75px, 75px)}
+.pleftright100  {@include padding-left-right( 100px,100px)}
+
+.box-shadow {
+  -webkit-box-shadow: 0 4px 32px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 4px 32px 0 rgba(0,0,0,.1);
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,.1);
+}
+
+.rounded-corners-big
+{
+  @include rounded-corners(200px, 200px, 200px, 200px);
+}
+
+.rounded-corners-medium
+{
+  @include rounded-corners(8px, 8px, 8px, 8px);
+}
+
+.rounded-corners-small
+{
+  @include rounded-corners(3px, 3px, 3px, 3px);
+}
+
+.rounded-corners
+{
+  @include rounded-corners(5px, 5px, 5px, 5px);
+}
+
+.no-rounded-corners
+{
+  @include rounded-corners(0, 0, 0, 0);
+}
+
+
+
+.bg-medium-gray
+{
+  background: #cccccc;
+}
+
+.bg-white
+{
+  @include bg-opacity($white,1);
+}
+
+.bg-green
+{
+  @include bg-opacity($green,1);
+}
+
+.bg-primary
+{
+  @include bg-opacity($primary,1);
+}
+
+.bg-primary-hover
+{
+  @include bg-opacity($primary-hover,1);
+}
+
+.bg-tertiary
+{
+  @include bg-opacity($tertiary,1);
+}
+
+.bg-secondary
+{
+  @include bg-opacity($secondary,1);
+}
+
+.bg-secondary-hover
+{
+  @include bg-opacity($secondary-hover,1);
+}
+
+.bg-lush-black
+{
+  @include bg-opacity($lush-black,1);
+}
+
+.bg-transparent
+{
+  @include bg-opacity($white,0);
+}
+
+.bg-dark-gray
+{
+  @include bg-opacity($dark-gray,1);
+}
+
+.bg-charcoal
+{
+  @include bg-opacity($medium-gray,1);
+}
+
+.bg-gray
+{
+  @include bg-opacity($gray,1);
+}
+
+.bg-light-gray
+{
+  background-color: #f7f7f7 !important;
+}
+
+.text-required
+{
+  color:red !important;
+}
+
+.btn-outline-text-white
+{
+  background: transparent;
+  border:1px solid #ffffff;
+  color: #ffffff;
+}
+
+.btn-outline-text-white:hover, .btn-outline-text-white:focus, .btn-outline-text-white:active
+{
+  background: #ffffff;
+  border:1px solid #ffffff;
+  color: rgba(0,61,255,1);
+}
+
+.btn-outline
+{
+  background: transparent;
+  border:1px solid #dddddd;
+  color: #ffffff;
+}
+
+.btn-outline:hover, .btn-outline:focus, .btn-outline:active
+{
+  background: $white;
+  border:1px solid #dddddd;
+  color: $primary;
+}
+
+.btn-outline-primary
+{
+  background: $primary;
+  border:1px solid $white;
+  color: $white;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active
+{
+  background: $white;
+  border:1px solid $white;
+  color: $primary;
+}
+
+.btn-outline-secondary
+{
+  background: $secondary;
+  border:1px solid $white;
+  color: $white;
+}
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active
+{
+  background: $white;
+  border:1px solid $white;
+  color: $secondary;
+}
+
+.btn-xl
+{
+  padding: 15px 25px;
+  font-size: 24px;
+  border-radius: 6px;
+}
+
+
+.btn-primary
+{
+  @include bg-opacity($primary,1);
+  @include text-color($white);
+  @include border($primary,1px);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:visited
+{
+  @include bg-opacity($primary-hover,1);
+  @include text-color($white);
+  @include border($primary-hover,1px);
+}
+
+.btn-secondary
+{
+  @include bg-opacity($secondary,1);
+  @include text-color($white);
+  @include border($secondary,1px);
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary:visited
+{
+  @include bg-opacity($secondary-hover,1);
+  @include text-color($white);
+  @include border($secondary-hover,1px);
+}
+
+.btn-white
+{
+  background: #ffffff ;
+  color: #717171;
+}
+
+.btn-white:hover
+{
+  background: #f9f9f9;
+  color: $primary;
+}
+
+.text-white
+{
+  color: $white!important;
+}
+
+.text-gray
+{
+  @include text-color($dark-gray);
+}
+
+.text-green
+{
+  @include text-color($green);
+}
+
+.text-primary
+{
+  @include text-color($primary);
+}
+
+.text-secondary
+{
+  @include text-color($secondary);
+}
+
+.text-tertiary
+{
+  @include text-color($tertiary);
+}
+
+.text-red
+{
+  @include text-color($red);
+}
+
+.border-left
+{
+  border-left: 1px solid;
+}
+
+.border-right
+{
+  border-right: 1px solid;
+}
+.border-top
+{
+  border-top: 1px solid;
+}
+
+.border-bottom
+{
+  border-bottom: 1px solid;
+}
+
+.border-all
+{
+  border: 1px solid;
+}
+
+.no-border {border: none !important;}
+
+.no-border-right {border-right: none !important;}
+
+.no-border-left {border-left: none !important;}
+
+.no-border-top {border-top: none !important;}
+
+.no-border-bottom {border-bottom: none !important;}
+
+.border-dark-gray
+{
+  border-color: #717171 !important;
+}
+
+.border-gray
+{
+  border-color: #dddddd !important;
+}
+
+.border-red
+{
+  border-color: $red !important;
+}
+
+.border-white
+{
+  border-color: #ffffff !important;
+}
+
+.border-medium-gray
+{
+  border-color: #C5C5C5 !important;
+}
+
+.border-light-gray
+{
+  border-color: #e1e1e1 !important;
+}
+
+.border-teal
+{
+  border-color: #66C8CD !important;
+}
+
+.border-primary
+{
+  border-color: $primary;
+}
+
+.border-secondary
+{
+  border-color: $secondary;
+}
+
+.border-pink
+{
+  border-color: #EE3D85 !important;
+}
+
+
+
+
+.text-smaller
+{
+  font-size: 11px !important;
+}
+.text-medium-smaller
+{
+  font-size: 13px !important;
+}
+
+.text-small
+{
+  font-size: 16px !important;
+}
+
+.text-lg
+{
+  font-size: 18px !important;
+}
+.text-x-lg
+{
+  font-size: 22px !important;
+}
+.text-xx-lg
+{
+  font-size: 28px !important;
+}
+.text-xxx-lg
+{
+  font-size: 36px !important;
+}
+.text-4x-lg
+{
+  font-size: 46px !important;
+}
+.text-5x-lg
+{
+  font-size: 54px !important;
+}
+.text-6x-lg
+{
+  font-size: 64px !important;
+}
+
+.overlay-bg, .overlay-bg-half, .overlay-bg-quarter,.overlay-bg-60,.overlay-bg-75, .overlay-bg-blue, .overlay-bg-blue-half, .overlay-bg-blue-quarter, .overlay-bg-blue-dark, .overlay-bg-blue-dark-half, .overlay-bg-blue-dark-quarter
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin:auto;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.overlay-bg, .bg-black-80
+{
+  background: rgba(0,0,0,.8);
+}
+
+.overlay-bg-quarter, .bg-black-25
+{
+  background: rgba(0,0,0,.25);
+}
+
+.overlay-bg-half, .bg-black-50
+{
+  background: rgba(0,0,0,.5);
+}
+
+.overlay-bg-60, .bg-black-60
+{
+  background: rgba(0,0,0,.6);
+}
+
+.overlay-bg-75, .bg-black-75
+{
+  background: rgba(0,0,0,.75);
+}
+
+.text-300 {font-family: latolight}
+.text-400 {font-family: latoregular}
+.text-700 {font-family: latobold}
+.text-900 {font-family: latoblack}
+
+.flex-justify-center
+{
+  justify-content: center;
+}
+
+
+.facebook-color{color:#3B5998}
+.facebook-bg{background-color:#3B5998; border:#3B5998; color: #ffffff}
+.linkedin-color{color:#4875B4}
+.linkedin-bg{background-color:#4875B4; border:#4875B4; color: #ffffff}
+.dribbble-color{color:#ea4c89}
+.dribbble-bg{background-color:#ea4c89; border:#ea4c89; color: #ffffff}
+.twitter-color{color:#33CCFF}
+.twitter-bg{background-color:#33CCFF; border:#33CCFF; color: #ffffff}
+.instagram-color{color:#3f729b}
+.instagram-bg{background-color:#3f729b; border:#3f729b; color: #ffffff}
+.pinterest-color{color:#cb2027}
+.pinterest-bg{background-color:#cb2027; border:#cb2027; color: #ffffff}
+.github-color{color:#4183c4}
+.github-bg{background-color:#4183c4; border:#4183c4; color: #ffffff}
+.behance-color{color:#1769ff}
+.behance-bg{background-color:#1769ff; border:#1769ff; color: #ffffff}
+
+
